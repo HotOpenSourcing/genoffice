@@ -9,12 +9,12 @@
   "main": "out/main/index.js",
   "desktopName": "genoffice.desktop",
   "scripts": {
-    "dev": "electron-vite dev --watch",
-    "build": "electron-vite build",
+    "dev": "node init && electron-vite dev --watch",
+    "build": "node init && electron-vite build",
     "notices": "node ../../tools/gen-third-party-notices.mjs",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "start": "electron-vite build && electron .",
+    "start": "node init && electron-vite build && electron .",
     "dist:mac": "npm run notices && electron-vite build && electron-builder --mac",
     "dist:win": "npm run notices && electron-vite build && electron-builder --win",
     "dist:linux": "npm run notices && electron-vite build && electron-builder --linux"

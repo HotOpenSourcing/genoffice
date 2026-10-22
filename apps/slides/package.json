@@ -7,9 +7,9 @@
   "description": "AI-native pptx editor: byte-fidelity open + high-fidelity Konva render + element-patch save",
   "main": "out/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev",
-    "dev:renderer": "vite --config vite.renderer.config.ts",
-    "build": "electron-vite build",
+    "dev": "node init && electron-vite dev",
+    "dev:renderer": "node init && vite --config vite.renderer.config.ts",
+    "build": "node init && electron-vite build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

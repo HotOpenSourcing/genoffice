@@ -7,9 +7,9 @@
   "description": "HTML editor module: source-of-truth HTML editing with live preview, hosted by shell tabs",
   "main": "out/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev",
-    "dev:renderer": "vite --config vite.renderer.config.ts",
-    "build": "electron-vite build",
+    "dev": "node init && electron-vite dev",
+    "dev:renderer": "node init && vite --config vite.renderer.config.ts",
+    "build": "node init && electron-vite build",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },

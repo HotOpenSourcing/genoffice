@@ -16,7 +16,7 @@
     "genoffice": "./bin/genoffice"
   },
   "scripts": {
-    "build": "node build.mjs && node collect-deps.mjs",
+    "build": "node init && node build.mjs && node collect-deps.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"

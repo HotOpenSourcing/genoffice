@@ -7,9 +7,9 @@
   "license": "Apache-2.0",
   "main": "out/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev",
-    "dev:renderer": "vite --config vite.renderer.config.ts",
-    "build": "npm run native:build && electron-vite build",
+    "dev": "node init && electron-vite dev",
+    "dev:renderer": "node init && vite --config vite.renderer.config.ts",
+    "build": "node init && npm run native:build && electron-vite build",
     "native:build": "cargo build --release --manifest-path native/xlsx-engine/Cargo.toml --config native/xlsx-engine/.cargo/config.toml",
     "native:build:universal": "node scripts/build-sidecar-universal.mjs",
     "native:test": "cargo test --manifest-path native/xlsx-engine/Cargo.toml --config native/xlsx-engine/.cargo/config.toml",
